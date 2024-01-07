@@ -1,0 +1,2 @@
+endDevices:
+  - sd-1000 # look in sd-1000.yaml for the end device definition
