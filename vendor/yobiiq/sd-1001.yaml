@@ -1,4 +1,4 @@
-name: SD1000 - Smoke Detector
+name: SD1001 - Smoke Detector
 description: Interconnectable Smoke Detector
 
 # Hardware versions (optional, use when you have revisions)
@@ -26,17 +26,11 @@ firmwareVersions:
     # RU864-870
     profiles:
       EU863-870:
-        # Optional identifier of the vendor of the profile. When you specify the vendorID, the profile is loaded from
-        # the vendorID's folder. This allows you to reuse profiles from module or LoRaWAN end device stack vendors.
-        # If vendorID is empty, the current vendor ID is used. In this example, the vendorID is the current vendor ID,
-        # which is verbose.
-        vendorID: example
-        # Identifier of the profile (lowercase, alphanumeric with dashes, max 36 characters)
-        id: sd-1000-profile
-        lorawanCertified: true
-        codec: sd-1000-codec
+        id: sd-1001-profile
+        lorawanCertified: false
+        codec: sd-1001-codec
 
- # Sensors that this device features (optional)
+  # Sensors that this device features (optional)
 # Valid values are:
 # 4-20 ma, accelerometer, altitude, analog input, auxiliary, barometer, battery, button, bvoc, co, co2, conductivity,
 # current, digital input, dissolved oxygen, distance, dust, energy, gps, gyroscope, h2s, humidity, iaq, level, light,
@@ -45,6 +39,7 @@ firmwareVersions:
 # solar radiation, sound, strain, surface temperature, temperature, tilt, time, tvoc, uv, vapor pressure, velocity,
 # vibration, voltage, water potential, water, weight, wifi ssid, wind direction, wind speed.
 sensors:
+  - smoke
   - battery
 
 # Battery information (optional)
@@ -57,4 +52,11 @@ productURL: https://yobiiq.com/products/smoke-detector/
 
 # Photos
 photos:
-  main: sd-1000.png # Image needs to have a transparent background
+  main: sd-1001.png # Image needs to have a transparent background
+
+# Regulatory compliances (optional)
+compliances:
+  safety:
+    - body: IEC
+      norm: EN
+      standard: 14604:2008
